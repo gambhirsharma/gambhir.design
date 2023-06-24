@@ -1,0 +1,129 @@
+@import "_var";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-image: url("/assets/bg.jpg");
+  font-family: "apercu", sans-serif;
+  background-position: 500 500;
+  background-size: contain;
+}
+a {
+  color: $green;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    color: $orange;
+  }
+}
+footer {
+  @extend a;
+  font-size: 1.5rem;
+}
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+#index {
+  // background-color: green;
+  @include flexCenter();
+  // padding: 0% 10% 0% 10%;
+  // end
+  nav {
+    position: absolute;
+    top: 7%;
+    font-size: 2rem;
+    a {
+      color: $white;
+    }
+  }
+  .index-content {
+    width: 100%;
+    height: 100%;
+
+    // background-color: red;
+    @include flexCenter();
+    flex-direction: column;
+    h1 {
+      text-align: center;
+      // font-size: 5.4rem;
+      font-size: clamp(4rem, -6.5915492958px + 9.7183098592vw, 5.4rem);
+      color: $orange;
+    }
+    p {
+      // font-size: 2rem;
+      font-size: clamp(1rem, -6.5915492958px + 7.7183098592vw, 2rem);
+      color: $white-dim;
+      width: 55%;
+      margin-left: 5%;
+    }
+    ul {
+      font-size: 3.6rem;
+      list-style: none;
+      @include flexCenter();
+      width: 100vw;
+      justify-content: center;
+      height: 80px;
+      padding: 0% 40%;
+      li {
+        margin: 10% 5%;
+
+        a {
+          color: $white-dim;
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+  // .index-right {
+  //   // width: 40%;
+  //   height: 100%;
+  //   @include flexCenter();
+
+  //   img {
+  //     $size: 40vmin;
+  //     height: $size;
+  //     width: $size;
+  //   }
+  // }
+}
+
+#project {
+  // background-color: yellow;
+
+  footer {
+    @include flexCenter();
+  }
+  // end
+}
+
+// responsive section
+@media only screen and (max-width: 600px) {
+  #index {
+    padding: 2%;
+    nav {
+      top: 4%;
+    }
+    h1 {
+      font-size: 2rem;
+      position: absolute;
+      top: 12%;
+    }
+    p {
+      display: block;
+      width: 80% !important;
+    }
+    ul {
+      margin-top: 5%;
+      padding: 0%;
+
+      width: 100vw;
+    }
+  }
+}

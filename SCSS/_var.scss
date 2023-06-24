@@ -1,0 +1,18 @@
+$white: #fff;
+$white-dim: #b9b9b9;
+$orange: #FD4924;
+$red: #A33327;
+$green: #689775;
+$brown: #917164;
+$brown-light: #AD8174;
+
+
+
+
+
+// +++ +++ +++ +++ 
+@mixin flexCenter(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
