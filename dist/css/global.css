@@ -9,6 +9,7 @@ body {
   font-family: "apercu", sans-serif;
   background-position: 500 500;
   background-size: contain;
+  background-color: #000;
 }
 
 a, footer {
